@@ -1,21 +1,4 @@
 <?php
-//function checkAuth(string $login, string $password): bool 
-//{
-//    $users = require __DIR__ . '/usersDB.php';
-//
-//    foreach ($users as $user) {
-//        if ($user['login'] === $login 
-//            && $user['password'] === $password
-//        ) {
-//            return true;
-//        }
-//    }
-//
-//    return false;
-//}
-
-
-
 function checkAuth(string $login, string $password){
     $db = require __DIR__ . '/usersDB.php';
     if($result = $db->query("SELECT login, password FROM users WHERE login = '" . $login."'")){
